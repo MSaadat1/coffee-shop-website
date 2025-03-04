@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo"><h1>GrandCoffee</h1></div>
+        <div class="humber-btn">
+          <img
+            class="menuIcon"
+            src="images/icon-hamburger.svg"
+            alt="humber-btn"
+          />
+        </div>
+        <div class="navbar-lists">
+          <ul class="navbar-ul">
+            <li class="home"><a href="#hero">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#testimony">Testimony</a></li>
+            <li><a href="#contact">Contacts</a></li>
+            <li><a href="#discount">Get Your Discount</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hero" id="hero">
+        <div class="hero-info">
+          <p class="hero-topic">Outstanding</p>
+          <h2>Coffee Shop</h2>
+          <p class="hero-para">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam
+            dicta ea minus consectetur dolore blanditiis laboriosam iusto,
+            exercitationem quis debitis culpa, iste aliquid aliquam! Animi at
+            similique expedita laboriosam ducimus.
+          </p>
+          <button class="read-more">Read More</button>
+        </div>
+      </div>
+      <div class="about-us" id="about">
+        <div class="about-para">
+          <h2>ABOUT US</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+            libero eius ipsa veniam, at velit qui totam fuga praesentium
+            accusantium dignissimos. Ducimus harum doloremque dolorem iure,
+            sequi praesentium repellat est.
+          </p>
+          <button class="about-btn">Read More</button>
+        </div>
+        <div class="about-image">
+          <img src="images/coffee-1.jpg" alt="about-image" />
+        </div>
+      </div>
+      <div class="menu" id="menu">
+        <div class="menu-title">
+          <h2>Our Coffee Offer</h2>
+        </div>
+        <div class="menu-lists"></div>
+      </div>
+      <div class="testimony" id="testimony">
+        <h2>WHAT SAYS CUSTOMERS</h2>
+        <div class="customers">
+          <div class="customer-image">
+            <img
+              class="customer-img"
+              src="people/img1.jpg"
+              alt="customer-image"
+            />
+          </div>
+          <div class="customer-saying">
+            <h3 class="customer-name">Joy Mark</h3>
+            <p class="customer-testimony">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum
+              iure, vitae, dolores ratione possimus ab, quisquam minus tempore
+              deleniti nemo labore sint earum inventore doloribus perspiciatis.
+              Assumenda eius distinctio repellat.
+            </p>
+          </div>
+          <div class="arrow-btn">
+            <button id="right-arrow">→</button>
+            <button id="left-arrow">←</button>
+          </div>
+        </div>
+      </div>
+      <div class="contact-container" id="contact">
+        <h2>Visit us or call us today</h2>
+        <p>Opening Hours</p>
+        <p>Mon : 9am - 8pm/ Sat: 8am - 4pm</p>
+        <p>Sun: Closed</p>
+        <p><a id="contact-email" href="">Contacts@gmail.com</a></p>
+        <p>202-451-5678</p>
+        <div class="contact">
+          <div class="form-container">
+            <form action="" id="contact-form">
+              <label for="name"></label>
+              <input name="name" type="text" placeholder="Name" required />
+              <label for="email"></label>
+              <input name="email" type="text" placeholder="Email" required />
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Message"
+                required
+              ></textarea>
+              <button type="submit" id="submitBtn">Submit</button>
+            </form>
+          </div>
+          <div class="contact-icons">
+            <div class="icon-container-1">
+              <img
+                class="contact-icon-1"
+                src="images/coffee-icon-3.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div id="thankyou" class="hidden">
+          Thank you for contacting us, will be in touch 😀
+        </div>
+      </div>
+      <div class="discount" id="discount">
+        <div class="discount-title">
+          <h3>
+            Enter your phone number
+            <span class="time">within 3 minutes</span> to get your Discount
+          </h3>
+          <div id="timer"></div>
+          <div class="discount-form">
+            <form action="" class="form-discount">
+              <label for="phone"></label>
+              <input
+                type="phone"
+                name="phone"
+                placeholder="(###) ### - #### "
+              />
+              <button id="discount-submit">Submit</button>
+            </form>
+          </div>
+        </div>
+        <div class="success-message"></div>
+        <div class="fail-message"></div>
+      </div>
+    </div>
+  </body>
+</html>
