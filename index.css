@@ -30,6 +30,9 @@ a {
   background-color: var(--dark-roast);
   color: var(--cream);
   padding: 0px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 .navbar-lists ul {
   display: flex;
@@ -63,15 +66,11 @@ a {
   gap: 5px;
 }
 .hero-topic {
-  font-size: 20px;
-  font-weight: lighter;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
   font-family: monospace;
 }
 .hero-info h2 {
-  font-size: 30px;
-  color: whitesmoke;
-
+  color: var(--chestnut);
   margin-bottom: 0px;
 }
 .hero-para {
@@ -81,7 +80,7 @@ a {
 .read-more,
 .about-btn {
   border: none;
-  padding: 20px 25px;
+  padding: 15px 20px;
   border-radius: 5px;
   background: var(--dark-roast);
   color: whitesmoke;
@@ -157,6 +156,166 @@ a {
   height: 150px;
   border-radius: 10px;
 }
+/* seasonal */
+.seasonal-title {
+  text-align: center;
+  color: var(--mocha);
+}
+.seasonal-title p {
+  margin-bottom: 40px;
+  color: var(--dark-roast);
+}
+.seasonal-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+  margin: auto;
+  justify-items: center;
+  align-items: center;
+}
+.seasonal-card {
+  width: 400px;
+  padding: 15px;
+  background: whitesmoke;
+  border-radius: 10px;
+  text-align: center;
+  color: var(--chestnut);
+  margin-bottom: 40px;
+}
+.seasonal-card:nth-child(1):hover {
+  background: lightpink;
+}
+.seasonal-card:nth-child(2):hover {
+  background: lightseagreen;
+}
+.seasonal-card:nth-child(3):hover {
+  background: lightsalmon;
+}
+.seasonal-card:nth-child(4):hover {
+  background: lightgray;
+}
+.seasonal-card img {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+.video-container {
+  text-align: center;
+  margin: 50px 0px;
+  padding: 20px;
+  background: url(images/smoke.jpg);
+  color: var(--cream);
+}
+iframe {
+  border-radius: 10px;
+}
+/* about us more */
+.about {
+  padding: 20px;
+}
+.our-journey h2 {
+  color: var(--chestnut);
+}
+.our-journey p {
+  color: var(--mocha);
+}
+.about-values {
+  display: flex;
+  gap: 20px;
+}
+.mission,
+.values {
+  display: flex;
+  flex-direction: column;
+  background: whitesmoke;
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--dark-roast);
+  box-shadow: 0px 1px 4px var(--dark-roast);
+}
+.mission h3,
+.values h3 {
+  margin-bottom: 0px;
+  color: var(--chestnut);
+}
+.values ul {
+  list-style: none;
+  padding: 0;
+}
+.coffee-process {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+}
+.about-process h3 {
+  color: var(--chestnut);
+}
+.about-process p {
+  color: var(--mocha);
+}
+.garden,
+.grind,
+.dry,
+.use {
+  width: 200px;
+  height: 160px;
+}
+.garden:hover {
+  content: "Pick up fresh bean";
+}
+.garden img,
+.grind img,
+.dry img,
+.use img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+/* image hover with content*/
+.garden,
+.dry,
+.grind,
+.use {
+  position: relative;
+  display: inline-block;
+}
+.garden::after,
+.dry::after,
+.grind::after,
+.use::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--dark-roast);
+  color: whitesmoke;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.garden:hover::after,
+.dry:hover::after,
+.grind:hover::after,
+.use:hover::after {
+  opacity: 1;
+}
+.garden::after {
+  content: "Picked Fresh From Garden";
+}
+.dry::after {
+  content: "Dry with much care";
+}
+.grind::after{
+  content: "Grinding with high quality";
+}
+.use::after{
+  content: "Brew in you cup";
+}
 /* testimony */
 .testimony {
   padding: 40px 20px;
@@ -224,15 +383,18 @@ a {
   color: var(--caramel);
 }
 .icon-container-1 {
-  max-width: 350px;
+  max-width: 400px;
+  height: 460px;
+  border-radius: 10px;
 }
 .contact-icon-1 {
   width: 100%;
-  height: 60vh;
   transition: all 0.3s ease-in-out;
+  border: 10px solid var(--dark-roast);
+  border-radius: 5px;
 }
 .contact-icon-1:hover {
-  transform: translate(-60px);
+  border: 10px solid var(--chestnut);
 }
 .form-container {
   display: flex;
@@ -337,7 +499,7 @@ form #submitBtn:hover {
 }
 
 @media (max-width: 765px) {
-  .hero{
+  .hero {
     height: 55vh;
   }
   .about-image {
@@ -346,6 +508,9 @@ form #submitBtn:hover {
   }
   .menu-lists {
     margin: auto auto;
+  }
+  .seasonal-card {
+    width: 300px;
   }
   .contact {
     flex-direction: column;
@@ -356,8 +521,9 @@ form #submitBtn:hover {
   form textarea {
     width: 300px;
   }
-  .contact-icon-1:hover {
-    transform: scale(1.2);
+  .icon-container-1 {
+    max-width: 350px;
+    height: 400px;
   }
   #timer {
     width: 300px;
@@ -395,7 +561,14 @@ form #submitBtn:hover {
   .contact-container p {
     text-align: center;
   }
-  button#submitBtn{
+  button#submitBtn {
     margin: auto;
+  }
+  iframe {
+    width: 380px;
+    height: 300px;
+  }
+  .coffee-process{
+    justify-items: center;
   }
 }

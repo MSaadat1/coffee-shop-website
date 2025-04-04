@@ -60,6 +60,7 @@ const coffeeData = [
     image: "images/iced.jpg",
   },
 ];
+
 const testimonials = [
   {
     image: "people/img2.jpg",
@@ -92,6 +93,30 @@ const testimonials = [
       "Best iced coffee in town! The perfect blend of sweetness and coolness, ideal for a hot summer day.This coffee shop is a great place to work or catch up with friends",
   },
 ];
+
+const seasonal = [
+  {
+    season: "Spring",
+    details: "Rose, Jasmine and Lavender",
+    image: "seasonal/spring-coffee.webp",
+  },
+  {
+    season: "Summer",
+    details: "Straw Berry, rase berry, and cherry",
+    image: "seasonal/summer-coffee.jpg",
+  },
+  {
+    season: "Fall",
+    details: "Pumpkin with cinnamon ",
+    image: "seasonal/fall-coffee.jpg",
+  },
+  {
+    season: "winter",
+    details: "Candy coin, ginger and peppermint",
+    image: "seasonal/winter-coffee.jpg",
+  },
+];
+
 const menuLists = document.querySelector(".menu-lists");
 const rightArrow = document.getElementById("right-arrow");
 const leftArrow = document.getElementById("left-arrow");
@@ -99,6 +124,7 @@ const testimonialsImage = document.querySelector(".customer-img");
 const customerName = document.querySelector(".customer-name");
 const customerTestimony = document.querySelector(".customer-testimony");
 
+// menu
 coffeeData.forEach((coffee) => {
   const coffeeCard = document.createElement("div");
   coffeeCard.classList.add("coffee-card");
@@ -112,6 +138,20 @@ coffeeData.forEach((coffee) => {
   menuLists.appendChild(coffeeCard);
 });
 
+// seasonal
+const seasonalGallery = document.querySelector(".seasonal-gallery");
+seasonal.forEach((season) => {
+  const seasonCard = document.createElement("div");
+  seasonCard.classList.add("seasonal-card");
+  seasonCard.innerHTML = `
+<h3>${season.season}</h3>
+<p>${season.details}</p>
+<img src="${season.image}" alt="${season.season}">
+`;
+seasonalGallery.appendChild(seasonCard)
+});
+
+// testimony
 let currentIndex = 0;
 
 function updatedTestimonial() {
@@ -204,7 +244,7 @@ const navLists = document.querySelector(".navbar-ul");
 let isOpen = false;
 
 humberBtn.addEventListener("click", () => {
-  isOpen = !isOpen;
   navLists.classList.toggle("active");
+  isOpen = !isOpen;
   menuIcon.src = isOpen ? "images/icon-close.svg" : "images/icon-hamburger.svg";
 });
