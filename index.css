@@ -308,13 +308,13 @@ iframe {
   content: "Picked Fresh From Garden";
 }
 .dry::after {
-  content: "Dry with much care";
+  content: "Dried with precision";
 }
 .grind::after{
-  content: "Grinding with high quality";
+  content: "High quality Grinding";
 }
 .use::after{
-  content: "Brew in you cup";
+  content: "Brewed in your cup";
 }
 /* testimony */
 .testimony {
