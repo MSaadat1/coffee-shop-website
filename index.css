@@ -138,6 +138,7 @@ a {
   justify-items: center;
   align-items: center;
   color: var(--mocha);
+  margin-bottom: 20px;
 }
 .coffee-card {
   width: 200px;
@@ -157,6 +158,9 @@ a {
   border-radius: 10px;
 }
 /* seasonal */
+#seasonal {
+  padding-top: 20px;
+}
 .seasonal-title {
   text-align: center;
   color: var(--mocha);
@@ -201,7 +205,7 @@ a {
 }
 .video-container {
   text-align: center;
-  margin: 50px 0px;
+  margin: 20px 0px 0px;
   padding: 20px;
   background: url(images/smoke.jpg);
   color: var(--cream);
@@ -310,15 +314,69 @@ iframe {
 .dry::after {
   content: "Dried with precision";
 }
-.grind::after{
+.grind::after {
   content: "High quality Grinding";
 }
-.use::after{
+.use::after {
   content: "Brewed in your cup";
+}
+/* team */
+.team {
+  padding: 40px 20px;
+  background: url(images/smoke.jpg);
+  margin-top: 20px;
+}
+.team h2{
+  text-align: center;
+  color: var(--caramel);
+}
+.team p{
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--cream);
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+.team-member {
+  width: 150px;
+  padding: 15px;
+  background: whitesmoke;
+  border-radius: 5px;
+  text-align: center;
+}
+.team-member p,
+.team-member h3 {
+  margin: 10px;
+  color: var(--mocha);
+}
+.team-member img {
+  width: 100%;
+  height: 150px;
+  border-radius: 5px;
+}
+p.head{
+  color: var(--chestnut);
+  text-shadow: 0px 1px 0px black;
+}
+p.pastry{
+  color: blue;
+  text-shadow: 0px 1px 0px black;
+}
+p.barista{
+  color: pink;
+  text-shadow: 0px 1px 0px black;
+}
+p.cashier{
+  color: darkgreen;
+  text-shadow: 0px 1px 0px black;
 }
 /* testimony */
 .testimony {
-  padding: 40px 20px;
+  padding: 20px;
 }
 .testimony h2 {
   color: var(--chestnut);
@@ -452,10 +510,10 @@ form #submitBtn:hover {
   cursor: pointer;
 }
 /* discount */
-
 .discount {
-  padding: 0px 20px;
+  padding:20px;
   padding-bottom: 40px;
+  background: url(images/smoke.jpg);
 }
 .discount h3 {
   color: var(--chestnut);
@@ -568,7 +626,10 @@ form #submitBtn:hover {
     width: 380px;
     height: 300px;
   }
-  .coffee-process{
+  .coffee-process {
     justify-items: center;
+  }
+  .team-grid{
+    align-items: center;
   }
 }
